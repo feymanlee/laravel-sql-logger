@@ -11,21 +11,23 @@ class ServiceProvider extends LaravelServiceProvider
     {
         $this->setConfig();
 
-        // if any of logging type is enabled we will listen database to get all
-        // executed queries
-        if ($this->app['config']->get('sql_logger.log_queries') ||
-            $this->app['config']->get('sql_logger.log_slow_queries')) {
-            // create logger class
-            $logger = new SqlLogger($this->app);
+        if ($this->app['config']->get('app.debug')) {
+            // if any of logging type is enabled we will listen database to get all
+            // executed queries
+            if ($this->app['config']->get('sql_logger.log_queries') ||
+                $this->app['config']->get('sql_logger.log_slow_queries')) {
+                // create logger class
+                $logger = new SqlLogger($this->app);
 
-            // listen to database queries
-            $this->app['db']->listen(function (
-                $query,
-                $bindings = null,
-                $time = null
-            ) use ($logger) {
-                $logger->log($query, $bindings, $time);
-            });
+                // listen to database queries
+                $this->app['db']->listen(function (
+                    $query,
+                    $bindings = null,
+                    $time = null
+                ) use ($logger) {
+                    $logger->log($query, $bindings, $time);
+                });
+            }
         }
     }
 
