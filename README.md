@@ -1,4 +1,4 @@
-<h1 align="center"> Laravel SQL Logger </h1>
+<h1 align="center"> Laravel Sql Logger </h1>
 
 <p align="center">:pencil: This package allows you to log SQL queries (and slow SQL queries) to log file in Laravel/Lumen framework.</p>
 
