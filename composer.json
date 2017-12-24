@@ -1,0 +1,27 @@
+{
+  "name": "feyman/laravel-sql-logger",
+  "description": "A tool to log all queries for laravel application.",
+  "type": "library",
+  "keywords": [
+    "laravel sql logger",
+    "query logger",
+    "Laravel query logger"
+  ],
+  "authors": [
+    {
+      "name": "feyman",
+      "email": "admin@feyman.me"
+    }
+  ],
+  "require": {
+    "illuminate/support": "5.*"
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Feyman\\LaravelSqlLogger\\Providers\\ServiceProvider"
+      ]
+    }
+  },
+  "license": "MIT"
+}
