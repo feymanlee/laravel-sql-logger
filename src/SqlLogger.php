@@ -67,8 +67,8 @@ class SqlLogger
      */
     public function __construct($app)
     {
-        $config = $this->app['config']->get('sql_logger');
         $this->app                = $app;
+        $config                   = $this->app['config']->get('sql_logger');
         $this->logStatus          = array_get($config, 'log_queries');
         $this->slowLogStatus      = array_get($config, 'log_slow_queries');
         $this->slowLogTime        = array_get($config, 'slow_queries_min_exec_time');
@@ -180,8 +180,7 @@ class SqlLogger
             : $execTime . 'ms';
 
         return '/* Query ' . $queryNr . ' - ' . date('Y-m-d H:i:s') . ' [' .
-            $time . ']' . "  */\n" . $query . ';' .
-            "\n/*==================================================*/\n";
+            $time . ']' . "  */" . PHP_EOL . $query . ';' . PHP_EOL;
     }
 
     /**
@@ -212,7 +211,7 @@ class SqlLogger
         }
 
         // now we create full SQL query - in case of failure, we log this
-        $query   = str_replace(['%', '?', "\n"], ['%%', "'%s'", ' '], $query);
+        $query   = str_replace(['%', '?', "\\n"], ['%%', "'%s'", ' '], $query);
         $fullSql = vsprintf($query, $bindings);
 
         return [$fullSql, $execTime];
