@@ -1,6 +1,6 @@
 {
   "name": "feyman/laravel-sql-logger",
-  "description": "A tool to log all queries for laravel application.",
+  "description": "A tool to log all queries for laravel/lumen application.",
   "type": "library",
   "keywords": [
     "laravel sql logger",
