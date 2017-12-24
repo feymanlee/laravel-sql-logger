@@ -16,7 +16,12 @@
   "require": {
     "illuminate/support": "5.*"
   },
-  "extra": {
+  "autoload": {
+    "psr-4": {
+      "Feyman\\LaravelSqlLogger\\": "src/"
+    }
+  },
+    "extra": {
     "laravel": {
       "providers": [
         "Feyman\\LaravelSqlLogger\\Providers\\ServiceProvider"

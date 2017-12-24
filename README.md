@@ -25,7 +25,7 @@ If you are using Lumen open `bootstrap/app.php` and add:
     
 ```php
 $app->register(Feyman\LaravelSqlLogger\Providers\ServiceProvider::class);
-$app->configure('sql_logger.php');
+$app->configure('sql_logger');
 ```
     
 If you use Laravel < 5.5 run:
