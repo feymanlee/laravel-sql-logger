@@ -8,7 +8,7 @@
 composer require feyman/laravel-sql-logger --dev
 ```
    
-in console to install this module (Notice `--dev` flag - it's recommended to use this package only for development). 
+Please keep the `--dev` option. (it's recommended to use this package only for development). 
 
 ## Configuration
 
@@ -58,7 +58,7 @@ For Lumen you should skip this step.
     SQL_LOG_SEPARATE_ARTISAN=false
     ```
     
-> and adjust values to your needs. If you have also `.env.sample` it's also recommended to add those entries also in `.env.sample` file just to make sureeveryone know about those env variables. Be aware that `SQL_LOG_DIRECTORY` is directory inside storage directory. If you want you can change it editing `config/sql_logger.php` file.
+and adjust values to your needs. If you have also `.env.sample` it's also recommended to add those entries also in `.env.sample` file just to make everyone know about those env variables. Be aware that `SQL_LOG_DIRECTORY` is directory inside storage directory. If you want you can change it editing `config/sql_logger.php` file.
     
 Make sure directory specified in `.env` file exists in storage path and you have valid file permissions to create and modify files in this directory (If it does not exist this package will automatically create it when needed but it's recommended to create it manually with valid file permissions)
 
