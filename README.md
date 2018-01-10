@@ -10,7 +10,7 @@ composer require feyman/laravel-sql-logger --dev
 ```
    
 Please keep the `--dev` option. (it's recommended to use this package only for development). 
-The Logger will be enabled when APP_DEBUG is true
+The Logger will be enabled when `APP_DEBUG` is true
 
 ## Configuration
 
