@@ -3,9 +3,10 @@
   "description": "A tool to log all queries for laravel/lumen application.",
   "type": "library",
   "keywords": [
-    "laravel sql logger",
-    "query logger",
-    "Laravel query logger"
+    "laravel-sql-logger",
+    "query-logger",
+    "lumen-query-logger",
+    "log-query"
   ],
   "authors": [
     {
