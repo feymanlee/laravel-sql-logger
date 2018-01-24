@@ -20,7 +20,7 @@ If you use Laravel < 5.5 open `app/Providers/AppServiceProvider.php` and in `reg
 public function register()
 {
     if ($this->app['config']->get('app.debug')) {
-        $this->app->register(Feyman\LaravelSqlLogger\Providers\ServiceProvider::class);
+        $this->app->register(\Feyman\LaravelSqlLogger\Providers\ServiceProvider::class);
     }
 }
 ```
@@ -31,7 +31,7 @@ If you are using Lumen open `bootstrap/app.php` and add:
     
 ```php
 if ($app['config']->get('app.debug')) {
-    $app->register(Feyman\LaravelSqlLogger\Providers\ServiceProvider::class);
+    $app->register(\Feyman\LaravelSqlLogger\Providers\ServiceProvider::class);
     $app->configure('sql_logger');
 }
 ```
