@@ -30,9 +30,8 @@ public function register()
 If you are using Lumen open `bootstrap/app.php` and add:
     
 ```php
-if ($app['config']->get('app.debug')) {
-    $app->register(\Feyman\LaravelSqlLogger\Providers\ServiceProvider::class);
-    $app->configure('sql_logger');
+if (env('APP_DEBUG')) {
+    $app->register(\Feyman\LaravelSqlLogger\Providers\LumenServiceProvider::class);
 }
 ```
     
